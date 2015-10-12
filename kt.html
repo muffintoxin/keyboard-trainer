@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="kt.css">
+		<title>Keyboard Trainer</title>
+		<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="kt.js"></script>
+	</head>
+	<body>
+		<div class="textToInputContainer">
+			<input type="text" class="text" id="text" readonly="readonly"/>
+		</div>
+		<div class="keyboard" id="keyboard">
+			<div class="line1" id="line1">
+				<div class="letter" id="letter1_1">]</div>
+				<div class="letter" id="letter1_2">1</div>
+				<div class="letter" id="letter1_3">2</div>					
+				<div class="letter" id="letter1_4">3</div>
+				<div class="letter" id="letter1_5">4</div>				
+				<div class="letter" id="letter1_6">5</div>
+				<div class="letter" id="letter1_7">6</div>
+				<div class="letter" id="letter1_8">7</div>
+				<div class="letter" id="letter1_9">8</div>
+				<div class="letter" id="letter1_10">9</div>
+				<div class="letter" id="letter1_11">0</div>
+				<div class="letter" id="letter1_12">-</div>
+				<div class="letter" id="letter1_13">=</div>		
+			</div>
+			<div class="line2" id="line2">
+				<div class="letter" id="letter2_1">й</div>
+				<div class="letter" id="letter2_2">ц</div>
+				<div class="letter" id="letter2_3">у</div>					
+				<div class="letter" id="letter2_4">к</div>
+				<div class="letter" id="letter2_5">е</div>				
+				<div class="letter" id="letter2_6">н</div>
+				<div class="letter" id="letter2_7">г</div>
+				<div class="letter" id="letter2_8">ш</div>
+				<div class="letter" id="letter2_9">щ</div>
+				<div class="letter" id="letter2_10">з</div>
+				<div class="letter" id="letter2_11">х</div>
+				<div class="letter" id="letter2_12">ъ</div>			
+			</div>
+			<div class="line3" id="line3">
+				<div class="letter" id="letter3_1">ф</div>
+				<div class="letter" id="letter3_2">ы</div>
+				<div class="letter" id="letter3_3">в</div>					
+				<div class="letter" id="letter3_4">а</div>
+				<div class="letter" id="letter3_5">п</div>				
+				<div class="letter" id="letter3_6">р</div>
+				<div class="letter" id="letter3_7">о</div>
+				<div class="letter" id="letter3_8">л</div>
+				<div class="letter" id="letter3_9">д</div>
+				<div class="letter" id="letter3_10">ж</div>
+				<div class="letter" id="letter3_11">э</div>
+				<div class="letter" id="letter3_12">ё</div>	
+			</div>
+			<div class="line4" id="line4">
+				<div class="letter" id="letter4_1">]</div>
+				<div class="letter" id="letter4_2">я</div>
+				<div class="letter" id="letter4_3">ч</div>					
+				<div class="letter" id="letter4_4">с</div>
+				<div class="letter" id="letter4_5">м</div>				
+				<div class="letter" id="letter4_6">и</div>
+				<div class="letter" id="letter4_7">т</div>
+				<div class="letter" id="letter4_8">ь</div>
+				<div class="letter" id="letter4_9">б</div>
+				<div class="letter" id="letter4_10">ю</div>
+				<div class="letter" id="letter4_11">/</div>
+			</div>
+			<div class="space" id="space"></div>
+			<div class="counter" id="counter">
+				<table class="counterTable" id="counterTable">
+					<tr>
+						<th>Right</th>
+						<th>Wrong</th>
+					</tr>
+					<tr>
+						<td id="counterForRight"></td>
+						<td id="counterForWrong"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+	
+</html>

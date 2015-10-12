@@ -1,0 +1,18 @@
+Russisch Tastatur Trainer - Spezifikation
+
+1. Der Trainingsbereich ist in 3 Bereiche aufgeteilt
+1.1 Der oberste Bereich zeigt, was ich eingeben soll
+1.2 Der mittlere Bereich zeigt, was ich gerade eingegeben habe (textarea)
+1.3 Der untere Berecih zeigt eine russische Tastatur mit den fingerpositionen für alle Tasten und
+	die jetzt zu drückende taste in rot.
+
+2. Es gibt verschiedene Lektionen. Von einfach mit wenigen Buchstaben bis schwerer mit vielen Buchstaben
+	pro Lektion.
+
+3. Am Ende einer Lektion kann man sehen wie viele Fehler man gemacht hat und wie schnell man war
+3.1 Man sieht die Gesamtzeit für den Test
+3.2 Man sieht die Anschläge pro Minute für den Test
+3.3 Man sieht die Anzahl an Fehlern
+	- Ein Fehler ist ein Anschlag, den man hätte verhindern können
+
+4. Man kann nur weiterkommen, wenn man alles richtig eingegeben hat

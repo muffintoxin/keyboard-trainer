@@ -1,0 +1,65 @@
+body {
+	background-color: rgb(224,255,255);
+}
+.textToInputContainer {
+	width: 60%;
+	height: 10%;
+	margin: auto;
+	margin-top: 20%;
+}
+.text {
+	width: 100%;
+	font-size: 2em;
+	transition: background-color 0.2s;
+}
+.keyboard {
+	margin: auto;
+	width: 60%;
+	height: 25%;
+	margin-top: 10px;
+}
+.letter {
+	display: inline-block;
+	width: 45px;
+	height: 30px;
+	border: 1px solid black;
+	text-align: center;
+	padding-top: 1em;
+	margin-bottom: 3px;
+	margin-left: -1px;
+	font-size: 1.2em;
+	background-color: rgb(200, 200, 200);
+}
+.space {
+	display: inline-block;
+	border: 1px solid black;
+	width: 250px;
+	height: 40px;
+	margin: auto;
+	margin-left: 30%;
+	background-color: rgb(200, 200, 200);
+}
+.line2 {
+	margin-left: 70px;
+}
+.line3 {
+	margin-left: 100px;
+}
+.line4 {
+	margin-left: 70px;
+}
+.rightKeyColor {
+	background-color: rgb(150, 255, 150);
+}
+.falseKeyColor {
+	background-color:  rgb(255, 150, 150);
+}
+.nextKeyColor {
+	background-color:   rgb(100, 100, 255);
+}
+.counter {
+	text-align: center;
+	width: 30%;
+	border: 1px solid black;
+	
+}
