@@ -2,15 +2,15 @@ body {
 	background-color: rgb(224,255,255);
 }
 .textToInputContainer {
-	width: 60%;
+	width: 55%;
 	height: 10%;
 	margin: auto;
-	margin-top: 20%;
+	margin-top: 5%;
 }
 .text {
 	width: 100%;
 	font-size: 2em;
-	transition: background-color 0.2s;
+	transition: background-color 0.5s;
 }
 .keyboard {
 	margin: auto;
@@ -29,6 +29,7 @@ body {
 	margin-left: -1px;
 	font-size: 1.2em;
 	background-color: rgb(200, 200, 200);
+	border-radius: 10px
 }
 .space {
 	display: inline-block;
@@ -52,14 +53,113 @@ body {
 	background-color: rgb(150, 255, 150);
 }
 .falseKeyColor {
-	background-color:  rgb(255, 150, 150);
+	background-color: rgb(255, 150, 150);
 }
 .nextKeyColor {
-	background-color:   rgb(100, 100, 255);
+	box-shadow: 0px 0px 5px 3px rgb(0, 0, 102);
 }
 .counter {
 	text-align: center;
-	width: 30%;
+	width: 50%;
 	border: 1px solid black;
-	
+	margin: auto;
+	margin-top: 20px;
+}
+.colorLittleFingerLeft {
+	background-color:  	rgb(255,0,255);
+}
+.colorRingFingerLeft {
+	background-color: rgb(0, 153, 204);
+}
+.colorMiddleFingerLeft {
+	background-color: rgb(0, 153, 51);
+}
+.colorIndexFingerLeft {
+	background-color: rgb(255, 255, 102);
+}
+.colorIndexFingerRight {
+	background-color: rgb(204, 204, 0);
+}
+.colorMiddleFingerRight {
+	background-color: rgb(102, 255, 102);
+}
+.colorRingFingerRight {
+	background-color: rgb(102, 153, 255);
+}
+.colorLittleFingerRight {
+	background-color: rgb(255, 102, 153);
+}
+.colorBigFinger {
+	background-color: rgb(255, 173, 92);
+}
+.keyColor {
+	background-color: rgb(200, 200, 200) !important;
+}
+.underline {
+	text-decoration: underline;
+}
+.fingerSet {
+	margin: auto;
+	width: 60%;
+	height: 25%;
+	margin-top: 100px;
+}
+.finger {
+	display: inline-block;
+    width: 30px;
+    height: 50px;
+    border-radius: 50px 50px 0 0;
+	border: 1px solid black;
+	padding-top: 1em;
+	margin-bottom: 3px;
+	margin-left: 2px;
+}
+.finger1 {
+	height: 20px;
+}
+.finger2 {
+	height: 40px;
+}
+.finger3 {
+	height: 50px;
+}
+.finger4 {
+	height: 30px;
+}
+.finger5 {
+	height: 15px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.levels {
+	margin: auto;
+	width: 25%;
+}
+.levels div{
+	display: inline-block;
+	border-radius: 3px;
+	line-height: 2em;
+	width: 30%;
+}
+
+.leftArrow {
+	border: 1px solid black;
+	width: 80px;
+	height: 30px;
+	background-color: rgb(200, 200, 200);
+	text-align: center;
+}
+.rightArrow {
+	border: 1px solid black;
+	width: 80px;
+	height: 30px;
+	background-color: rgb(200, 200, 200);
+	text-align: center;
+}
+.currentLevel {
+	border: 1px solid black;
+	height: 30px;
+	width: 100px;
+	background-color: rgb(200, 200, 200);
+	text-align: center;
 }

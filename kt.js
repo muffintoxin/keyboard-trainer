@@ -1,30 +1,35 @@
 $(document).ready(function(){
 	var keyPressed = "";
 	var keyArrayToPress = "";
-	var alphabet = "]1234567890-=йцукенгшщзхъфывапролджэёячсмитьбю";
+	var symbols = "]-=/";
+	var numbers = "1234567890";
+	var letters = "аовлыфджэпркгушцщйзхъёенмтсьчбяюи1234567890]-=/";
+	var alphabet = letters;
 	var $displayKeysToPress = $('#text');
-	var keyArrayToPressLength = 40;
+	var keyArrayToPressLength = 10;
 	var rightPress =0;
-	var falsePress= 0;
+	var falsePress = 0;
 	var colorClasses = ["rightKeyColor", "falseKeyColor", "nextKeyColor"];
 	var counterForRightPress = $('#counterForRight');
-	var counterForFalsePress = $('#counterForWrong');	
+	var counterForFalsePress = $('#counterForWrong');
+	var keyboardFingerColors = $('#keyboardFingerColors');
+	var $checkNumbers = $('#checkNumbers');
+	var $currentLevel = $('#currentLevel');
+	var currentLevel = 1;
+	var maxLevel = 23;
+
 	
 	function randomLetters(alphabet, length) {
 		var keyArrayToPressLocal = "";
 
 		for (var i = 0; i < length; i++) {
 
-			var randomNumber = Math.floor((Math.random()*alphabet.length)+1);
+			var randomNumber = Math.floor((Math.random()*alphabet.length)+1)-1;
 
 			keyArrayToPressLocal += alphabet.charAt(randomNumber);
 		};
 		return keyArrayToPressLocal;
 	};
-
-	keyArrayToPress = randomLetters(alphabet, keyArrayToPressLength);
-
-	$displayKeysToPress.attr("value", keyArrayToPress);
 
 	function setColorOfKeyOnKeyboard(key, classToAdd) {
 		$('.letter').each( function() {
@@ -46,6 +51,20 @@ $(document).ready(function(){
 		});
 	}
 
+	function checkForNextLevel () {
+		if (keyArrayToPress === "") {
+			checkForRestartLevel();
+		};
+	}
+
+	function checkForRestartLevel() {
+		if (falsePress === 0) {
+			increaseLevel();
+		} else {
+			initialise();
+		}
+	}
+
 	$displayKeysToPress.keypress(function(event) {
 		keyPressed = String.fromCharCode(event.which);
 
@@ -55,23 +74,86 @@ $(document).ready(function(){
 			keyArrayToPress = keyArrayToPress.slice(1);
 			$displayKeysToPress.attr("value", keyArrayToPress);
 			rightPress++;
-			counterForRightPress.text(rightPress);
 			$displayKeysToPress.addClass("rightKeyColor");
 			setInterval(function() {
 				$displayKeysToPress.removeClass("rightKeyColor");
-			}, 200);
+			}, 500);
+			checkForNextLevel();
 			//setColorOfKeyOnKeyboard(keyPressed, "rightKeyColor");
 		} else {
 			falsePress++;
-			counterForFalsePress.text(falsePress);
 			$displayKeysToPress.addClass("falseKeyColor");
 			setInterval(function() {
 				$displayKeysToPress.removeClass("falseKeyColor");
-			}, 200);
+			}, 500);
 			//setColorOfKeyOnKeyboard(keyPressed, "falseKeyColor");
 		};
+		updateCounterDisplay();
 		setColorOfKeyOnKeyboard(keyArrayToPress.charAt(0), "nextKeyColor");
 	});
-	setColorOfKeyOnKeyboard(keyArrayToPress.charAt(0), "nextKeyColor");
-	$displayKeysToPress.focus();
+
+	function updateCounterDisplay() {
+		counterForRightPress.text(rightPress);
+		counterForFalsePress.text(falsePress);
+	}
+
+	keyboardFingerColors.click(function() {
+		$('.letter').toggleClass("keyColor");
+		$('#fingerSet').toggle();
+	});
+
+	$checkNumbers.click(function() {
+		if ( $checkNumbers.is(':checked') ) {
+			alphabet = numbers + letters;
+		}
+		else {
+			alphabet = letters;
+		}
+		initialise();
+	});
+
+	function updateLevelDisplay() {
+		$currentLevel.text('Level ' + currentLevel);
+		alphabet = letters.substr(0, currentLevel*2);
+	}
+
+	function increaseLevel() {
+		if (currentLevel < maxLevel) {
+			currentLevel++;
+			initialise();
+		}
+	}
+
+	function decreaseLevel() {
+		if (currentLevel > 1) {
+			currentLevel--;
+			initialise();
+		}
+	}
+
+	$('#rightArrow').click(function() {
+		increaseLevel();
+	});
+
+	$('#leftArrow').click(function() {
+		decreaseLevel();
+	});
+
+	function initialise() {
+		rightPress = 0;
+		falsePress = 0;
+		
+		updateCounterDisplay();
+		updateLevelDisplay();
+
+		keyArrayToPress = randomLetters(alphabet, keyArrayToPressLength);
+		$displayKeysToPress.attr("value", keyArrayToPress);
+		
+		$('.letter').removeClass("nextKeyColor");
+		setColorOfKeyOnKeyboard(keyArrayToPress.charAt(0), "nextKeyColor");
+		$displayKeysToPress.focus();
+
+		updateLevelDisplay();
+	}
+	initialise();
 });

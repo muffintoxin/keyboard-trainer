@@ -8,79 +8,114 @@
 		<script type="text/javascript" src="kt.js"></script>
 	</head>
 	<body>
+		<div class="levels" id="levels">
+			<div class="leftArrow" id="leftArrow"> < </div>
+			<div class="currentLevel" id="currentLevel">Level 1</div>
+			<div class="rightArrow" id="rightArrow"> > </div>
+		</div>
 		<div class="textToInputContainer">
 			<input type="text" class="text" id="text" readonly="readonly"/>
 		</div>
 		<div class="keyboard" id="keyboard">
 			<div class="line1" id="line1">
-				<div class="letter" id="letter1_1">]</div>
-				<div class="letter" id="letter1_2">1</div>
-				<div class="letter" id="letter1_3">2</div>					
-				<div class="letter" id="letter1_4">3</div>
-				<div class="letter" id="letter1_5">4</div>				
-				<div class="letter" id="letter1_6">5</div>
-				<div class="letter" id="letter1_7">6</div>
-				<div class="letter" id="letter1_8">7</div>
-				<div class="letter" id="letter1_9">8</div>
-				<div class="letter" id="letter1_10">9</div>
-				<div class="letter" id="letter1_11">0</div>
-				<div class="letter" id="letter1_12">-</div>
-				<div class="letter" id="letter1_13">=</div>		
+				<div class="letter colorLittleFingerLeft" id="letter1_1">]</div>
+				<div class="letter colorLittleFingerLeft" id="letter1_2">1</div>
+				<div class="letter colorLittleFingerLeft" id="letter1_3">2</div>					
+				<div class="letter colorRingFingerLeft" id="letter1_4">3</div>
+				<div class="letter colorMiddleFingerLeft" id="letter1_5">4</div>				
+				<div class="letter colorIndexFingerLeft" id="letter1_6">5</div>
+				<div class="letter colorIndexFingerLeft" id="letter1_7">6</div>
+				<div class="letter colorIndexFingerRight" id="letter1_8">7</div>
+				<div class="letter colorIndexFingerRight" id="letter1_9">8</div>
+				<div class="letter colorMiddleFingerRight" id="letter1_10">9</div>
+				<div class="letter colorRingFingerRight" id="letter1_11">0</div>
+				<div class="letter colorLittleFingerRight" id="letter1_12">-</div>
+				<div class="letter colorLittleFingerRight" id="letter1_13">=</div>		
 			</div>
 			<div class="line2" id="line2">
-				<div class="letter" id="letter2_1">й</div>
-				<div class="letter" id="letter2_2">ц</div>
-				<div class="letter" id="letter2_3">у</div>					
-				<div class="letter" id="letter2_4">к</div>
-				<div class="letter" id="letter2_5">е</div>				
-				<div class="letter" id="letter2_6">н</div>
-				<div class="letter" id="letter2_7">г</div>
-				<div class="letter" id="letter2_8">ш</div>
-				<div class="letter" id="letter2_9">щ</div>
-				<div class="letter" id="letter2_10">з</div>
-				<div class="letter" id="letter2_11">х</div>
-				<div class="letter" id="letter2_12">ъ</div>			
+				<div class="letter colorLittleFingerLeft" id="letter2_1">й</div>
+				<div class="letter colorRingFingerLeft" id="letter2_2">ц</div>
+				<div class="letter colorMiddleFingerLeft" id="letter2_3">у</div>					
+				<div class="letter colorIndexFingerLeft" id="letter2_4">к</div>
+				<div class="letter colorIndexFingerLeft" id="letter2_5">е</div>				
+				<div class="letter colorIndexFingerRight" id="letter2_6">н</div>
+				<div class="letter colorIndexFingerRight" id="letter2_7">г</div>
+				<div class="letter colorMiddleFingerRight" id="letter2_8">ш</div>
+				<div class="letter colorRingFingerRight" id="letter2_9">щ</div>
+				<div class="letter colorLittleFingerRight" id="letter2_10">з</div>
+				<div class="letter colorLittleFingerRight" id="letter2_11">х</div>
+				<div class="letter colorLittleFingerRight" id="letter2_12">ъ</div>			
 			</div>
 			<div class="line3" id="line3">
-				<div class="letter" id="letter3_1">ф</div>
-				<div class="letter" id="letter3_2">ы</div>
-				<div class="letter" id="letter3_3">в</div>					
-				<div class="letter" id="letter3_4">а</div>
-				<div class="letter" id="letter3_5">п</div>				
-				<div class="letter" id="letter3_6">р</div>
-				<div class="letter" id="letter3_7">о</div>
-				<div class="letter" id="letter3_8">л</div>
-				<div class="letter" id="letter3_9">д</div>
-				<div class="letter" id="letter3_10">ж</div>
-				<div class="letter" id="letter3_11">э</div>
-				<div class="letter" id="letter3_12">ё</div>	
+				<div class="letter colorLittleFingerLeft" id="letter3_1">ф</div>
+				<div class="letter colorRingFingerLeft" id="letter3_2">ы</div>
+				<div class="letter colorMiddleFingerLeft" id="letter3_3">в</div>					
+				<div class="letter colorIndexFingerLeft underline" id="letter3_4">а</div>
+				<div class="letter colorIndexFingerLeft" id="letter3_5">п</div>				
+				<div class="letter colorIndexFingerRight" id="letter3_6">р</div>
+				<div class="letter colorIndexFingerRight underline" id="letter3_7">о</div>
+				<div class="letter colorMiddleFingerRight" id="letter3_8">л</div>
+				<div class="letter colorRingFingerRight" id="letter3_9">д</div>
+				<div class="letter colorLittleFingerRight" id="letter3_10">ж</div>
+				<div class="letter colorLittleFingerRight" id="letter3_11">э</div>
+				<div class="letter colorLittleFingerRight" id="letter3_12">ё</div>	
 			</div>
 			<div class="line4" id="line4">
-				<div class="letter" id="letter4_1">]</div>
-				<div class="letter" id="letter4_2">я</div>
-				<div class="letter" id="letter4_3">ч</div>					
-				<div class="letter" id="letter4_4">с</div>
-				<div class="letter" id="letter4_5">м</div>				
-				<div class="letter" id="letter4_6">и</div>
-				<div class="letter" id="letter4_7">т</div>
-				<div class="letter" id="letter4_8">ь</div>
-				<div class="letter" id="letter4_9">б</div>
-				<div class="letter" id="letter4_10">ю</div>
-				<div class="letter" id="letter4_11">/</div>
+				<div class="letter colorLittleFingerLeft" id="letter4_1">]</div>
+				<div class="letter colorLittleFingerLeft" id="letter4_2">я</div>
+				<div class="letter colorRingFingerLeft" id="letter4_3">ч</div>					
+				<div class="letter colorMiddleFingerLeft" id="letter4_4">с</div>
+				<div class="letter colorIndexFingerLeft" id="letter4_5">м</div>				
+				<div class="letter colorIndexFingerLeft" id="letter4_6">и</div>
+				<div class="letter colorIndexFingerRight" id="letter4_7">т</div>
+				<div class="letter colorIndexFingerRight" id="letter4_8">ь</div>
+				<div class="letter colorMiddleFingerRight" id="letter4_9">б</div>
+				<div class="letter colorRingFingerRight" id="letter4_10">ю</div>
+				<div class="letter colorLittleFingerRight" id="letter4_11">/</div>
 			</div>
-			<div class="space" id="space"></div>
+			<div class="letter space colorBigFinger" id="space"></div>
 			<div class="counter" id="counter">
 				<table class="counterTable" id="counterTable">
 					<tr>
-						<th>Right</th>
+						<th>Rigth</th>
 						<th>Wrong</th>
+						<th>
+							<label>
+								<input id="keyboardFingerColors" type="checkbox" value="fingerColors"/>Finger Colors
+							</label>
+						</th>
+						<th>
+							<label>
+								<input id="checkNumbers" type="checkbox" value="trainNumbers"/>Train Numbers
+							</label>
+						</th>
+						<th>
+							<label>Time</label>
+						</th>
+
 					</tr>
 					<tr>
 						<td id="counterForRight"></td>
 						<td id="counterForWrong"></td>
+						<td></td>
+						<td></td>
+						<td id="timeCounter"></td>
 					</tr>
 				</table>
 			</div>
+			<div class="fingerSet" id="fingerSet">
+				<div class="finger colorLittleFingerLeft finger1"></div>
+				<div class="finger colorRingFingerLeft finger2"></div>
+				<div class="finger colorMiddleFingerLeft finger3"></div>
+				<div class="finger colorIndexFingerLeft finger4"></div>
+				<div class="finger colorBigFinger finger5"></div>
+				<div class="finger colorBigFinger finger5"></div>
+				<div class="finger colorIndexFingerRight finger4"></div>
+				<div class="finger colorMiddleFingerRight finger3"></div>
+				<div class="finger colorRingFingerRight finger2"></div>
+				<div class="finger colorLittleFingerRight finger1"></div>
+			</div>
+			
 		</div>
 	</body>
 	
