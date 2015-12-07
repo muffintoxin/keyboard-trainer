@@ -14,6 +14,7 @@ $(document).ready(function(){
 	var $counterForFalsePress = $('#counterForWrong');
 	var $keyboardFingerColors = $('#keyboardFingerColors');
 	var $checkNumbers = $('#checkNumbers');
+	var $checkHideKeys = $('#checkHideKeys');
 	var $currentLevel = $('#currentLevel');
 	var $leftToType = $('#leftToType');
 	var currentLevel = 1;
@@ -112,6 +113,15 @@ $(document).ready(function(){
 			alphabet = letters;
 		}
 		initialise();
+	});
+
+	$checkHideKeys.click(function() {
+		if ( $checkHideKeys.is(':checked') ) {
+			$('.letter').addClass('letter--hide');
+		}
+		else {
+			$('.letter').removeClass('letter--hide');
+		}
 	});
 
 	function updateLevelDisplay() {

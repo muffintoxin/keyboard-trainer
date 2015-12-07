@@ -88,6 +88,9 @@ li {
 	background-color: rgb(200, 200, 200);
 	border-radius: 10px
 }
+.letter--hide {
+	color: transparent;
+}
 .space {
 	display: inline-block;
 	width: 250px;
@@ -115,13 +118,15 @@ li {
 	box-shadow: 0px 0px 5px 3px rgb(0, 0, 102);
 }
 .counter {
-	text-align: center;
 	width: 90%;
 	margin: auto;
 	margin-top: 10px;
 	padding: 5px;
     background-color: rgb(200,200,200);
     border-radius: 10px;
+}
+.counterTable {
+	margin-top: 10px;
 }
 .colorLittleFingerLeft {
 	background-color:  	rgb(255,0,255);
