@@ -7,9 +7,9 @@
 		<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="kt.js"></script>
 	</head>
-	<body>
+	<body class="page-ct">
 		<header>
-			<div id="logo">Keyboard Trainer für Patrick</div>
+			<div id="logo">Keyboard Trainer</div>
 				<nav>
 					<ul>
 						<li><a href="#" class="current">Home</a></li>
@@ -21,16 +21,17 @@
 				</nav>
 		</header>
 		<div class="levels" id="levels">
-			<div class="leftArrow" id="leftArrow"> < </div>
-			<div class="currentLevel" id="currentLevel">Level 1</div>
-			<div class="rightArrow" id="rightArrow"> > </div>
+			<div class="leftArrow button" id="leftArrow"> &lt; </div>
+			<div class="currentLevel button" id="currentLevel">Level 1</div>
+			<div class="rightArrow button" id="rightArrow"> &gt; </div>
 		</div>
 		<div class="textToInputContainer">
 			<input type="text" class="text" id="text" readonly="readonly"/>
+			<span id="leftToType" class="leftToType"></span>
 		</div>
 		<div class="keyboard" id="keyboard">
 			<div class="line1" id="line1">
-				<div class="letter colorLittleFingerLeft" id="letter1_1">]</div>
+				<div class="letter colorLittleFingerLeft" id="letter1_1">&gt;</div>
 				<div class="letter colorLittleFingerLeft" id="letter1_2">1</div>
 				<div class="letter colorLittleFingerLeft" id="letter1_3">2</div>					
 				<div class="letter colorRingFingerLeft" id="letter1_4">3</div>
@@ -86,10 +87,22 @@
 				<div class="letter colorLittleFingerRight" id="letter4_11">/</div>
 			</div>
 			<div class="letter space colorBigFinger" id="space"></div>
+			<div class="fingerSet" id="fingerSet">
+				<div class="finger colorLittleFingerLeft finger1"></div>
+				<div class="finger colorRingFingerLeft finger2"></div>
+				<div class="finger colorMiddleFingerLeft finger3"></div>
+				<div class="finger colorIndexFingerLeft finger4"></div>
+				<div class="finger colorBigFinger finger5"></div>
+				<div class="finger colorBigFinger finger5"></div>
+				<div class="finger colorIndexFingerRight finger4"></div>
+				<div class="finger colorMiddleFingerRight finger3"></div>
+				<div class="finger colorRingFingerRight finger2"></div>
+				<div class="finger colorLittleFingerRight finger1"></div>
+			</div>
 			<div class="counter" id="counter">
 				<table class="counterTable" id="counterTable">
 					<tr>
-						<th>Rigth</th>
+						<th>Right</th>
 						<th>Wrong</th>
 						<th>
 							<label>
@@ -115,19 +128,6 @@
 					</tr>
 				</table>
 			</div>
-			<div class="fingerSet" id="fingerSet">
-				<div class="finger colorLittleFingerLeft finger1"></div>
-				<div class="finger colorRingFingerLeft finger2"></div>
-				<div class="finger colorMiddleFingerLeft finger3"></div>
-				<div class="finger colorIndexFingerLeft finger4"></div>
-				<div class="finger colorBigFinger finger5"></div>
-				<div class="finger colorBigFinger finger5"></div>
-				<div class="finger colorIndexFingerRight finger4"></div>
-				<div class="finger colorMiddleFingerRight finger3"></div>
-				<div class="finger colorRingFingerRight finger2"></div>
-				<div class="finger colorLittleFingerRight finger1"></div>
-			</div>
-			
 		</div>
 	</body>
 	

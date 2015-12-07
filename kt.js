@@ -1,20 +1,21 @@
 $(document).ready(function(){
 	var keyPressed = "";
 	var keyArrayToPress = "";
-	var symbols = "]-=/";
+	var symbols = "]-=/>";
 	var numbers = "1234567890";
-	var letters = "аовлыфджэпркгушцщйзхъёенмтсьчбяюи1234567890]-=/";
+	var letters = "аовлыфджэпркгушцщйзхъёенмтсьчбяюи";
 	var alphabet = letters;
 	var $displayKeysToPress = $('#text');
 	var keyArrayToPressLength = 10;
 	var rightPress =0;
 	var falsePress = 0;
 	var colorClasses = ["rightKeyColor", "falseKeyColor", "nextKeyColor"];
-	var counterForRightPress = $('#counterForRight');
-	var counterForFalsePress = $('#counterForWrong');
-	var keyboardFingerColors = $('#keyboardFingerColors');
+	var $counterForRightPress = $('#counterForRight');
+	var $counterForFalsePress = $('#counterForWrong');
+	var $keyboardFingerColors = $('#keyboardFingerColors');
 	var $checkNumbers = $('#checkNumbers');
 	var $currentLevel = $('#currentLevel');
+	var $leftToType = $('#leftToType');
 	var currentLevel = 1;
 	var maxLevel = 23;
 
@@ -93,11 +94,12 @@ $(document).ready(function(){
 	});
 
 	function updateCounterDisplay() {
-		counterForRightPress.text(rightPress);
-		counterForFalsePress.text(falsePress);
+		$counterForRightPress.text(rightPress);
+		$counterForFalsePress.text(falsePress);
+		$leftToType.text(keyArrayToPress.length + ' left');
 	}
 
-	keyboardFingerColors.click(function() {
+	$keyboardFingerColors.click(function() {
 		$('.letter').toggleClass("keyColor");
 		$('#fingerSet').toggle();
 	});
@@ -142,17 +144,15 @@ $(document).ready(function(){
 	function initialise() {
 		rightPress = 0;
 		falsePress = 0;
-		
-		updateCounterDisplay();
-		updateLevelDisplay();
 
-		keyArrayToPress = randomLetters(alphabet, keyArrayToPressLength);
+		keyArrayToPress = randomLetters(alphabet, keyArrayToPressLength*currentLevel);
 		$displayKeysToPress.attr("value", keyArrayToPress);
 		
 		$('.letter').removeClass("nextKeyColor");
 		setColorOfKeyOnKeyboard(keyArrayToPress.charAt(0), "nextKeyColor");
 		$displayKeysToPress.focus();
-
+		
+		updateCounterDisplay();
 		updateLevelDisplay();
 	}
 	initialise();
