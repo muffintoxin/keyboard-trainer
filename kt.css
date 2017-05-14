@@ -90,6 +90,7 @@ li {
 }
 .letter--hide {
 	color: transparent;
+	box-shadow: none !important;
 }
 .space {
 	display: inline-block;
