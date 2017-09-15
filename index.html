@@ -100,21 +100,21 @@
 				<div class="finger colorLittleFingerRight finger1"></div>
 			</div>
 			<div class="counter" id="counter">
-				<label> <input id="keyboardFingerColors" type="checkbox" value="fingerColors"/>Finger Colors</label>
-				<label> <input id="checkNumbers" type="checkbox" value="trainNumbers"/>Train Numbers</label>
-				<label> <input id="checkHideKeys" type="checkbox" value="hideKeys"/>Hide Keys</label>
-				<table class="counterTable" id="counterTable">
-					<tr>
-						<th>Right</th>
-						<th>Wrong</th>
-						<th>Time</th>
-					</tr>
-					<tr>
-						<td id="counterForRight"></td>
-						<td id="counterForWrong"></td>
-						<td id="timeCounter"></td>
-					</tr>
-				</table>
+				<div class="counter-label">
+					<label> <input id="keyboardFingerColors" type="checkbox" value="fingerColors"/><span>Finger Colors</span></label>
+					<label> <input id="checkNumbers" type="checkbox" value="trainNumbers"/><span>Train Numbers</span></label>
+					<label> <input id="checkHideKeys" type="checkbox" value="hideKeys"/><span>Hide Keys</span></label>
+				</div>
+				<div class="counterTable" id="counterTable">
+					<div class="table counterTable-first">
+						<div>Right</div>
+						<div>Wrong</div>
+					</div>
+					<div class="table counterTable-second">
+						<div id="counterForRight"></div>
+						<div id="counterForWrong"></div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</body>
